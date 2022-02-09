@@ -1,0 +1,19 @@
+# 给定一个包含大写字母和小写字母的字符串，找到通过这些字母构造成的最长的回文串。
+#
+# 在构造过程中，请注意区分大小写。比如 "Aa" 不能当做一个回文字符串。
+#
+# 注意:
+# 假设字符串的长度不会超过 1010。
+#
+# 来源：力扣（LeetCode）
+# 链接：https://leetcode-cn.com/problems/longest-palindrome
+# 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
+def longestPalindrome(s: str) -> int:
+    import collections
+    vs = collections.Counter(s).values()
+    return sum(v//2*2 for v in vs)+any(v % 2 for v in vs)
+
+
+if __name__ == '__main__':
+    print(longestPalindrome(s="civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth"))
