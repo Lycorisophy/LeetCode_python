@@ -21,5 +21,5 @@ def knightProbability(n: int, k: int, row: int, column: int) -> float:
 
 
 if __name__ == '__main__':
-    print(knightProbability(3, 2, 0, 0))
-    print(knightProbability(7, 4, 3, 3))
+    print(knightProbability(n=3, k=2, row=0, column=0))
+    print(knightProbability(n=1, k=0, row=0, column=0))
